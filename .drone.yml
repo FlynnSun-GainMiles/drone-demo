@@ -14,8 +14,7 @@ steps:
   - name: echo                           # 事件二：可自行定義的名稱
     image: plugins/git                   # 使用 plugins/git  容器
     commands:                            # 預執行的 shell 指令，這邊印出 78523 內容
-    - echo "Trigger master branch"
-    - echo "Good"
+    - echo "Trigger master branch."
     when:                                # 當觸發條件為 master 分支時會執行的動作
       branch:
       - master
@@ -23,7 +22,7 @@ steps:
   - name: dev_action                     # 事件三：可自行定義的名稱
     image: plugins/git                   # 使用 plugins/git  容器
     commands:                            # 預執行的 shell 指令，這邊印出 111111 內容
-    - echo "Trigger develop branch"
+    - echo "Trigger develop branch."
     when:                                # 當觸發條件為 develop 分支時會執行的動作
       branch:
       - develop
